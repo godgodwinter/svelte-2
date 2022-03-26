@@ -25,7 +25,7 @@
 </div>
 
 <footer class="p-0 bg-gray-50 rounded-lg shadow md:px-0 md:pt-8 dark:bg-gray-800">
-	<div class="sm:flex sm:items-center sm:justify-end">
+	<div class="sm:flex sm:items-center sm:justify-end px-10">
 		<ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
 			<li>
 				<a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
@@ -44,7 +44,7 @@
 
 	<div class="bg-gray-100">
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-		<span class=" block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+		<span class=" block text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center"
 			>© 2022 <a href="https://babeng.web.id" class="hover:underline">Babeng</a>. All Rights
 			Reserved.
 		</span>

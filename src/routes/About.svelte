@@ -1,15 +1,435 @@
 <script>
-	import {count} from '../stores.js';
-	let countValue;
-	count.subscribe(value => {
-		countValue = value;
-	});
-
-	function increment() {
-		count.set(countValue + 1);
-	}
+	import imgPhotoProfile from '../assets/img/photo/babenggray.jpg';
+	import imgPorto1 from '../assets/img/avatar/baemon-ava-1.jpg';
 </script>
 
-<button class="py-2 px-2 rounded-md bg-red-400" on:click={increment}> increment </button>
-<h1>This Is {countValue}</h1>
-<h1>About</h1>
+<div class="md:flex w-full gap-4">
+	<div class="lg:w-3/12">
+		<div class="bg-white p-3 border-t-4 border-green-400">
+			<div class="image overflow-hidden">
+				<img class="h-96 rounded-lg w-full object-cover mx-auto" src={imgPhotoProfile} alt="" />
+			</div>
+			<h1 class="text-gray-900 font-bold text-xl leading-8 my-1">Kukuh Setya Nugraha</h1>
+			<h3 class="text-gray-600 font-lg text-semibold leading-6">Full stack web developer.</h3>
+			<p class="text-sm text-gray-500 hover:text-gray-600 leading-6">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eligendi dolorum
+				sequi illum qui unde aspernatur non deserunt
+			</p>
+			<ul
+				class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm"
+			>
+				<li class="flex items-center py-3">
+					<span>Status</span>
+					<span class="ml-auto"
+						><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span
+					>
+				</li>
+				<li class="flex items-center py-3">
+					<span>Member since</span>
+					<span class="ml-auto">Nov 07, 2016</span>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<div class="flex flex-col items-center pb-10">
+				<img class="mb-3 w-32 h-3w-32 rounded-full shadow-lg" src={imgPhotoProfile} />
+				<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Kukuh Setya Nugraha</h5>
+				<span class="text-sm text-gray-500 dark:text-gray-400">Full stack Web Developer</span>
+			</div>
+		</div>
+		<div>About</div>
+	</div>
+	<div class="lg:w-9/12">
+		<div>
+			<!-- About Section -->
+			<div class="bg-gray-50 p-3 shadow-sm rounded-sm">
+				<div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+					<span clas="text-green-500">
+						<svg
+							class="h-5"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+							/>
+						</svg>
+					</span>
+					<span class="tracking-wide">About</span>
+				</div>
+				<div class="text-gray-700">
+					<div class="flex items-center mb-5">
+						<p
+							class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800"
+						>
+							8.7
+						</p>
+						<p class="ml-2 font-medium text-gray-900 dark:text-white">Excellent</p>
+						<span class="mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500" />
+						<p class="text-sm font-medium text-gray-500 dark:text-gray-400">376 reviews</p>
+						<a
+							href="#"
+							class="ml-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+							>Read all reviews</a
+						>
+					</div>
+					<div class="gap-8 sm:grid sm:grid-cols-2">
+						<div>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Staff</dt>
+								<dd class="flex items-center mb-3">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 88%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Comfort</dt>
+								<dd class="flex items-center mb-3">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Free WiFi</dt>
+								<dd class="flex items-center mb-3">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 88%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Facilities</dt>
+								<dd class="flex items-center">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 54%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">5.4</span>
+								</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
+									Value for money
+								</dt>
+								<dd class="flex items-center mb-3">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Cleanliness</dt>
+								<dd class="flex items-center mb-3">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 70%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">7.0</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Location</dt>
+								<dd class="flex items-center">
+									<div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+										<div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%" />
+									</div>
+									<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<button
+					class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4"
+					>Show Full Information</button
+				>
+			</div>
+			<!-- End of about section -->
+		</div>
+
+		<!-- Portofolio Section -->
+		<div>
+			<div class="bg-gray-50 p-3 shadow-sm rounded-sm">
+				<div class="text-gray-700">
+					<div class="flex items-center mb-5">
+						<p
+							class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800"
+						>
+							8.7
+						</p>
+						<p class="ml-2 font-medium text-gray-900 dark:text-white">Portofolio</p>
+						<span class="mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500" />
+						<p class="text-sm font-medium text-gray-500 dark:text-gray-400">50 Projects</p>
+						<a
+							href="#"
+							class="ml-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+							>View More</a
+						>
+					</div>
+					<div class="gap-8 sm:grid sm:grid-cols-1">
+						<div class="w-full ">
+							<dl class="flex  justify-between px-4 border-b-2 hover:shadow-xl">
+								<div class="flex gap-10 w-10/12">
+									<img
+										class="rounded w-36 h-36 object-cover"
+										src={imgPorto1}
+										alt="Extra large avatar"
+									/>
+									<div class="overflow-hidden h-24">
+										<h1 class="text-gray-600 font-semibold text-xl py-2">Porto 1</h1>
+										<p class="text-gray-500 font-light">
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo illo voluptatem
+											minima voluptate in est, accusamus ducimus, molestias rem minus accusantium
+											harum odio sapiente! Id accusantium et nihil veritatis. Aspernatur. Lorem
+											ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni sunt
+											dicta iure voluptates, quod, soluta ut reprehenderit sed eius nemo libero
+											provident explicabo earum. Odio rem tempora magni totam!
+										</p>
+									</div>
+								</div>
+								<div class="grid grid-cols-1 w-2/12 content-center">
+									<button
+										class="py-1 mx-auto px-6 hover:bg-green-700 bg-green-500 rounded-lg text-gray-200 font-light mt-2"
+									>
+										Demo
+									</button>
+									<button
+										class="py-1 mx-auto px-6 hover:bg-gray-800 bg-gray-600 rounded-lg text-gray-200 font-light mt-2"
+									>
+										Repo
+									</button>
+									<button
+										class="py-1 mx-auto px-6 hover:bg-blue-800 bg-blue-600 rounded-lg text-gray-200 font-light mt-2"
+									>
+										Detail
+									</button>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Portofolio section -->
+		<!-- Achievement  Section -->
+		<div>
+			<div class="bg-gray-50 p-3 shadow-sm rounded-sm">
+				<div class="text-gray-700">
+					<div class="flex items-center mb-5">
+						<p
+							class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800"
+						>
+							8.7
+						</p>
+						<p class="ml-2 font-medium text-gray-900 dark:text-white">Achievement</p>
+						<span class="mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500" />
+						<p class="text-sm font-medium text-gray-500 dark:text-gray-400">50 Projects</p>
+					</div>
+					<div class="gap-8 sm:grid sm:grid-cols-3">
+						<div
+							class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl"
+						>
+							<a href="#">
+								<img class="rounded-t-lg h-32 w-full object-cover" src={imgPorto1} alt="" />
+							</a>
+							<div class="p-5">
+								<a href="#">
+									<h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+										Noteworthy technology acquisitions 2021
+									</h5>
+								</a>
+								<p class="mb-1 font-normal text-gray-700 dark:text-gray-400">Udemy - Course</p>
+
+								<div class="w-full text-right">
+									<a
+										href="#"
+										class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+									>
+										Check
+										<svg
+											class="ml-2 -mr-1 w-4 h-4"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+											xmlns="http://www.w3.org/2000/svg"
+											><path
+												fill-rule="evenodd"
+												d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+												clip-rule="evenodd"
+											/></svg
+										>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Achievement section -->
+
+		<!-- Experience  Section -->
+		<div>
+			<div class="bg-gray-50 p-3 shadow-sm rounded-sm">
+				<div class="text-gray-700">
+					<div class="flex items-center mb-5">
+						<p
+							class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800"
+						>
+							8.7
+						</p>
+						<p class="ml-2 font-medium text-gray-900 dark:text-white">Experience</p>
+						<span class="mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500" />
+						<p class="text-sm font-medium text-gray-500 dark:text-gray-400">3 years Experience</p>
+					</div>
+					<div class="gap-8 sm:grid sm:grid-cols-1">
+						<ol class="relative border-l border-gray-200 dark:border-gray-700">
+							<li class="mb-10 ml-4">
+								<div
+									class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+								/>
+								<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+									>February 2022</time
+								>
+								<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+									Application UI code in Tailwind CSS
+								</h3>
+								<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+									Get access to over 20+ pages including a dashboard layout, charts, kanban board,
+									calendar, and pre-order E-commerce & Marketing pages.
+								</p>
+								<a
+									href="#"
+									class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+									>Learn more <svg
+										class="ml-2 w-3 h-3"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+										xmlns="http://www.w3.org/2000/svg"
+										><path
+											fill-rule="evenodd"
+											d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/></svg
+									></a
+								>
+							</li>
+							<li class="mb-10 ml-4">
+								<div
+									class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+								/>
+								<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+									>March 2022</time
+								>
+								<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+									Marketing UI design in Figma
+								</h3>
+								<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+									All of the pages and components are first designed in Figma and we keep a parity
+									between the two versions even as we update the project.
+								</p>
+							</li>
+							<li class="ml-4">
+								<div
+									class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+								/>
+								<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+									>April 2022</time
+								>
+								<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+									E-Commerce UI code in Tailwind CSS
+								</h3>
+								<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+									Get started with dozens of web components and interactive elements built on top of
+									Tailwind CSS.
+								</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Experience section -->
+
+		<div>
+			<!-- About Section -->
+			<div class="bg-gray-50 p-3 shadow-sm rounded-sm">
+				<div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+					<span clas="text-green-500">
+						<svg
+							class="h-5"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+							/>
+						</svg>
+					</span>
+					<span class="tracking-wide">About</span>
+				</div>
+				<div class="text-gray-700">
+					<div class="grid md:grid-cols-2 text-sm">
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">First Name</div>
+							<div class="px-4 py-2">Jane</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Last Name</div>
+							<div class="px-4 py-2">Doe</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Gender</div>
+							<div class="px-4 py-2">Female</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Contact No.</div>
+							<div class="px-4 py-2">+11 998001001</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Current Address</div>
+							<div class="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Permanant Address</div>
+							<div class="px-4 py-2">Arlington Heights, IL, Illinois</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Email.</div>
+							<div class="px-4 py-2">
+								<a class="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
+							</div>
+						</div>
+						<div class="grid grid-cols-2">
+							<div class="px-4 py-2 font-semibold">Birthday</div>
+							<div class="px-4 py-2">Feb 06, 1998</div>
+						</div>
+					</div>
+				</div>
+				<button
+					class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4"
+					>Show Full Information</button
+				>
+			</div>
+			<!-- End of about section -->
+		</div>
+
+		<div>Porto</div>
+	</div>
+</div>
