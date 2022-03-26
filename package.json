@@ -1,5 +1,5 @@
 {
-  "name": "my-vue-app",
+  "name": "svelte-2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -24,6 +24,7 @@
   "format": "prettier --write '{public,src}/**/*.{css,html,js,svelte}'",
   "lint": "eslint --fix --quiet src --ext .js,.svelte",
   "dependencies": {
+    "axios": "^0.26.1",
     "svelte-navigator": "^3.1.5"
   }
 }

@@ -113,6 +113,8 @@
 				<Link to="/" class="font-medium text-gray-500 hover:text-gray-900">Home</Link>
 
 				<Link to="about" class="font-medium text-gray-500 hover:text-gray-900">About</Link>
+				<Link to="portofolio" class="font-medium text-gray-500 hover:text-gray-900">Portofolio</Link
+				>
 			</div>
 		</nav>
 	</div>
