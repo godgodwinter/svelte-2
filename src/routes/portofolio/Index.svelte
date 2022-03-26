@@ -113,6 +113,14 @@
 								>
 									{@html item.desc}
 								</p>
+
+								<div class="flex justify-end flex-wrap gap-1">
+									{#each item.label as label}
+										<span class="text-gray-50 bg-red-400 px-1 py-1 rounded-lg text-xs"
+											>#{label.name}</span
+										>
+									{/each}
+								</div>
 							</div>
 						</div>
 					</a>

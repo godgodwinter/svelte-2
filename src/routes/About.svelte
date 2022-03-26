@@ -234,6 +234,14 @@
 												/>
 												<div class="overflow-hidden h-24">
 													<h1 class="text-gray-600 font-semibold text-xl py-2">{porto.title}</h1>
+
+													<div class="flex justify-start flex-wrap gap-1">
+														{#each porto.label as label}
+															<span class="text-gray-50 bg-red-400 px-1 py-1 rounded-lg text-xs"
+																>#{label.name}</span
+															>
+														{/each}
+													</div>
 													<p class="text-gray-500 font-light">
 														{@html porto.desc}
 													</p>
@@ -242,7 +250,7 @@
 											<div class="grid grid-cols-1 w-2/12 content-center">
 												<a
 													href={porto.demo}
-													class="py-1 mx-auto px-6 hover:bg-green-700 bg-green-500 rounded-lg text-gray-200 font-light mt-2"
+													class="py-1 mx-auto px-6 hover:bg-green-700 bg-green-500  text-gray-200 font-light mt-2"
 												>
 													Demo
 												</a>
